@@ -150,10 +150,10 @@ export default Component.extend({
 
     cloneNode.id = `${cloneNode.id}--clone`;
     cloneNode.style.position = 'absolute';
-    cloneNode.style.width = `${sortableContainer.width}px`;
-    cloneNode.style.height = `${sortableContainer.height}px`;
-    cloneNode.style.left = `${sortableContainer.grabbedAt.x}px`;
-    cloneNode.style.top = `${sortableContainer.grabbedAt.y}px`;
+    cloneNode.style.width = `${sortableContainer.clientWidth}px`;
+    cloneNode.style.height = `${sortableContainer.clientHeight}px`;
+    cloneNode.style.left = `${sortableContainer.left}px`;
+    cloneNode.style.top = `${sortableContainer.top}px`;
     cloneNode.style.zIndex = '9999';
 
     get(this, 'documentWindow').classList.add('sortable-attached');
